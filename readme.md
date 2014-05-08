@@ -1,0 +1,3 @@
+#WhereDoc
+
+WhereDoc is a tool for doctors and patients. It allows doctors that are a part of the service to register a profile, their specialties, their location, their insurers, and their current schedule. Doctors can use the tool to track their schedule, and their availability is automatically updated. Patients can log in and register a profile. They can enter a location, an insurer, and an area of treatment. WhereDoc will provide them with a map of the closest doctors with available appointments. Patients can optionally enter preferred weekly times for appointments, which will further filter their results.
