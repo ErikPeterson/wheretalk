@@ -28,6 +28,7 @@ gem 'spring',        group: :development
 
 group :development, :test do 
 	gem 'rspec-rails'
+	gem 'database_cleaner'
 end
 
 # Use ActiveModel has_secure_password
