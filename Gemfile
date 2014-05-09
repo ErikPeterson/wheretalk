@@ -28,6 +28,8 @@ gem 'spring',        group: :development
 
 group :development, :test do 
 	gem 'rspec-rails'
+	gem 'pry'
+	gem 'simplecov', '~> 0.7.1'
 	gem 'database_cleaner'
 end
 
