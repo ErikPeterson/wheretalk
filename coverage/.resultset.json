@@ -443,7 +443,7 @@
         null,
         null,
         1,
-        9,
+        10,
         null,
         null,
         1,
@@ -451,17 +451,21 @@
         null,
         null,
         1,
-        9,
+        10,
         null,
         null,
         1,
-        9,
+        10,
         null,
         null,
         null
       ],
       "/Users/erik/Dev/wheredoc/app/controllers/pages_controller.rb": [
         1,
+        null,
+        null,
+        1,
+        null,
         null,
         1,
         null,
@@ -541,6 +545,6 @@
         null
       ]
     },
-    "timestamp": 1399651460
+    "timestamp": 1399651721
   }
 }

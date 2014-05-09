@@ -14,7 +14,7 @@ describe PagesController do
 	describe "#profile" do
 		
 		describe "with a logged in user" do
-			
+			render_views
 			before :each do	
 		  		@user = User.create({
 		  			:email => "test@test.com",
@@ -33,6 +33,14 @@ describe PagesController do
 				expect(response).to render_template("profile")
 			end
 
+			it "should have the user's profile information" do
+				get :profile
+				expect(response.body).to match(@user.name)
+				expect(response.body).to match(@user.email)
+				expect(response.body).to match(@user.title)
+				expect(response.body).to match(@user.degree)
+				expect(response.body).to match(@user.address)
+			end
 		end
 	end
 end
