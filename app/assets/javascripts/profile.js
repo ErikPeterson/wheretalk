@@ -4,8 +4,8 @@ var ProfileMap = function(){
 
 ProfileMap.prototype.initialize = function(){
 	this.$el= $('#map');
-	this.height = $('.container.profile').height();
-	this.width = $('.container.profile').height();
+	this.height = $('.container.profile-card').height();
+	this.width = this.height;
 	this.handler = Gmaps.build('Google');
 	this.lat = +this.$el.data('lat');
 	this.lng = +this.$el.data('long');

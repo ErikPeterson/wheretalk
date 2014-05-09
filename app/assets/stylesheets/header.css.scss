@@ -1,0 +1,58 @@
+@import 'support/variables';
+
+header{
+	@include box-sizing(border-box);
+	display: block;
+	position: relative;
+	top: 0;
+	left: 0;
+	margin: 0;
+	width: 100%;
+	height: auto;
+	padding: .25em 1em;
+	color: white;
+	background-color: $primary-color;
+
+	h1{
+		display: inline-block;
+		font-size: 1.5em;
+		font-weight: 400;
+		padding: 0;
+		margin: 0;
+	}
+
+	div.header-item{
+		@include box-sizing(border-box);
+		display: inline-block;
+		position: relative;
+		width: auto;
+		height: 2.25em;
+		float: right;
+		
+		span{
+			line-height: 2.25;
+			vertical-align: middle;
+			display: inline-block;
+			padding: 0 0 0 .25em;
+			height: 2.25em;
+		}
+
+		ul.header-links{
+			display: inline-block;
+			width: auto;
+			height: 2.25em;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			vertical-align: middle;
+			li{
+				@include box-sizing(border-box);
+				line-height: 2.25;
+				vertical-align: middle;
+				display: inline-block;
+				padding: 0 0 0 .25em;
+				height: 2.25em;
+			}
+		}
+	}
+}

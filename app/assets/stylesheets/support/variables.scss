@@ -1,0 +1,19 @@
+$primary-color: #2ED0B9;	
+$primary-dark-lo-sat: #419C90;
+$primary-dark-hi-sat: #0F8877;
+$primary-light-hi-sat: #81F5E5;	
+$primary-light-lo-sat: #BDF5ED;
+
+$complement: #FF8B39;
+$complement-dark: #A75013;
+$complement-light: #FFB987;
+
+$font-stack: Helvetica, Arial, sans-serif;
+
+@mixin box-sizing($mode){
+	-webkit-box-sizing: $mode;
+	   -moz-box-sizing: $mode;
+	    -ms-box-sizing: $mode;
+	     -o-box-sizing: $mode;
+	        box-sizing: $mode;
+}
