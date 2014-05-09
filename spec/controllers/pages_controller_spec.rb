@@ -47,7 +47,7 @@ describe PagesController do
 		describe "without a logged in user" do
 			it "should redirect to the sign_in route" do
 				get :profile
-				epxect(response).to redirect_to :index
+				expect(response).to redirect_to "/users/sign_in"
 			end
 		end
 
