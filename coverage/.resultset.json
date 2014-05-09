@@ -475,7 +475,6 @@
         null
       ],
       "/Users/erik/Dev/wheredoc/spec/helpers/pages_helper_spec.rb": [
-        1,
         null,
         null,
         null,
@@ -487,8 +486,9 @@
         null,
         null,
         null,
-        1,
-        1,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/erik/Dev/wheredoc/spec/models/user_spec.rb": [
@@ -540,6 +540,6 @@
         null
       ]
     },
-    "timestamp": 1399650434
+    "timestamp": 1399650537
   }
 }
