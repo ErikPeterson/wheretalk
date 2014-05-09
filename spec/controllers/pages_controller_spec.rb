@@ -41,6 +41,16 @@ describe PagesController do
 				expect(response.body).to match(@user.degree)
 				expect(response.body).to match(@user.address)
 			end
+
 		end
+
+		describe "without a logged in user" do
+			it "should redirect to the sign_in route" do
+				get :profile
+				epxect(response).to redirect_to :index
+			end
+		end
+
 	end
+
 end
