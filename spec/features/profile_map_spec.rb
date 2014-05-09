@@ -1,7 +1,7 @@
 include Warden::Test::Helpers
 Warden.test_mode!
 
-describe "profile map", :js => true do
+describe "profile map" do
 
 	before :each do	
 		@user = User.create({
@@ -20,5 +20,10 @@ describe "profile map", :js => true do
     expect(page).to have_selector 'div#map'
   end
 
+  it "should have data on lat and long of doctor" do
+    visit "/profile/#{@user.id}"
+    expect(page).to have_selector "div#map[data-lat='#{@user.latitude}']"
+    expect(page).to have_selector "div#map[data-long='#{@user.longitude}']"
+  end
 
 end
