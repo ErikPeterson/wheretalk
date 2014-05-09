@@ -1,1 +1,4 @@
-profile.html.erb
+<div class="container profile">
+	<h1 class="name"><%= @doctor.name %>, <small><%= @doctor.degree %></small>, <small><%= @doctor.title %></small></h1>
+	<h3 class="address"><% @doctor.address.split(', ').each do |line| %><%= line %>,<br /><% end %></h3>
+</div>

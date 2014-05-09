@@ -1,10 +1,12 @@
 class PagesController < ApplicationController
-	before_filter :authenticate_user!, :only =>[:profile]
 	
 	def index
 	end
 
 	def profile
+		return redirect_to "/users/edit" if current_user && !params[:id]
+		return redirect_to "/users/sign_in" if !current_user && !params[:id]
+		@doctor = User.find(params[:id]);
 	end
 
 end
