@@ -41,6 +41,11 @@ describe User do
 	  		@user.title = ""
 	  		expect(@user.save).to equal(false)
 	  	end
+	  	it "converts address to latitude and longitude" do
+	  		@user.save
+	  		expect(@user.latitude).to_not be_nil
+	  		expect(@user.longitude).to_not be_nil
+	  	end
 	end
   end
 end
