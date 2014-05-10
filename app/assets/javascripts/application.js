@@ -14,3 +14,4 @@
 //= require gmaps/google
 //= require jquery
 //= require jquery_ujs
+//= require ./MapGenerator.js

@@ -1,14 +1,18 @@
-<div class="container profile">
+<div class="profile">
 	<div class="container profile-card">
 		<%= image_tag 'profile.jpg', :class => 'profile-image' %>
 		<div class="title-card">
-			<h1 class="name"><%= @doctor.name %>, <small><%= @doctor.degree %></small></h1>
+			<h1 class="name"><%= @doctor.name %></h1> <small><%= @doctor.degree %></small><br />
 			<span class="subhed title"><%= @doctor.title %></span>
-		</div>
+		
 		<p class="address">
 			<%= @doctor.address.split(', ').join(',<br />').html_safe %>
 		</p>
+
+		</div>
 	</div>
+
+
 	<div class="container map-card">
 		<div id="map" data-lat="<%= @doctor.latitude %>" data-long="<%= @doctor.longitude %>">
 		</div>

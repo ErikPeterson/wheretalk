@@ -13,9 +13,15 @@ header{
 	color: white;
 	background-color: $primary-color;
 
+	a{
+		color: white;
+	}
+	a:hover{
+		color: $complement-light;
+	}
 	h1{
 		display: inline-block;
-		font-size: 1.5em;
+		font-size: 1.25em;
 		font-weight: 400;
 		padding: 0;
 		margin: 0;
@@ -47,11 +53,12 @@ header{
 			vertical-align: middle;
 			li{
 				@include box-sizing(border-box);
-				line-height: 2.25;
+				line-height: 2.75;
 				vertical-align: middle;
 				display: inline-block;
 				padding: 0 0 0 .25em;
 				height: 2.25em;
+				font-size: .75em;
 			}
 		}
 	}

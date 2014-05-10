@@ -8,13 +8,19 @@ body{
 	background-color: $primary-light-lo-sat;
 	font: 400 16px/1.5 $font-stack;
 	color: #474747;
+	a{
+		color: $complement-light;
+	}
+	p.notice, p.alert{
+		display: none;
+	}
 }
 
 main{
  	@include box-sizing(border-box);
  	background-color: transparent;
  	position: relative;
- 	padding: 1em .5em;
+ 	padding: .5em 0;
  	width: 100%;
  	text-align: center;
 }
