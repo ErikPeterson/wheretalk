@@ -39,6 +39,9 @@ gem 'geocoder'
 # gmaps4rails provides an interface for generating map data in the controller for use in google maps on the front end
 gem 'gmaps4rails'
 
+# adds icon library
+gem 'font-awesome-sass'
+
 group :development, :test do 
 	gem 'capybara'
 	gem 'rspec-rails'

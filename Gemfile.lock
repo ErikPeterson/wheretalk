@@ -52,6 +52,8 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.0.2)
+    font-awesome-sass (4.0.3.1)
+      sass (~> 3.2)
     geocoder (1.2.0)
     gmaps4rails (2.1.2)
     hike (1.2.3)
@@ -168,6 +170,7 @@ DEPENDENCIES
   coffee-script
   database_cleaner
   devise
+  font-awesome-sass
   geocoder
   gmaps4rails
   jbuilder (~> 2.0)

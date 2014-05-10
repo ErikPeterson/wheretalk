@@ -26,4 +26,8 @@ describe "profile map" do
     expect(page).to have_selector "div#map[data-long='#{@user.longitude}']"
   end
 
+  it "should have a map", :js=>true do
+  	visit "/profile/#{@user.id}"
+  	expect(page).to have_selector "div.gm-style"
+  end
 end
