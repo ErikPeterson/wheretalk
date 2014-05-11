@@ -49,6 +49,29 @@
 			that.__markerFromAjax(JSON.parse(data));
 		});
 	};
+
+
+	MapGenerator.prototype.placesFromAddress = function(address){
+
+		var addressData = {location: address},
+			that = this;
+
+		$.ajax({type:"POST", url: "/geocode/near", data: addressData, success: function(data){
+			console.log(data);
+			that.__drawGroupFromAjax(data);
+		}, error: function(jqXHR, textStatus, errorThrown){
+			alert("Error: " + textStatus + ", " + errorThrown);
+		}});
+
+	};
+
+	MapGenerator.prototype.__drawGroupFromAjax = function(markerObj){
+		this.clearMarkers()
+		this.markers = markerObj.markers;
+		this.settings.center = markerObj.center;
+		this.drawMarkers();
+	};
+
 	MapGenerator.prototype.__geoInit = function(){
 		var geo = window.navigator.geolocation,
 			that = this;

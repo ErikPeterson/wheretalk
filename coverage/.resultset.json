@@ -411,6 +411,7 @@
         1,
         1,
         1,
+        1,
         null
       ],
       "/Users/erik/Dev/wheredoc/app/models/user.rb": [
@@ -434,6 +435,12 @@
       ],
       "/Users/erik/Dev/wheredoc/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/erik/Dev/wheredoc/app/helpers/doctors_helper.rb": [
+        1,
+        1,
+        null,
         null
       ],
       "/Users/erik/Dev/wheredoc/spec/support/db_cleaner.rb": [
@@ -465,14 +472,28 @@
         1,
         null,
         1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
         1,
-        1,
+        null,
         1,
         1,
         1,
         null,
         1,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -612,7 +633,7 @@
         null,
         1,
         1,
-        1,
+        0,
         null,
         null,
         1,
@@ -758,7 +779,7 @@
         null
       ]
     },
-    "timestamp": 1399833640
+    "timestamp": 1399842214
   },
   "Cucumber Features": {
     "coverage": {

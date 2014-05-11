@@ -1,0 +1,21 @@
+{
+	"center": {
+		"lat": <%= @center["lat"] %>,
+		"lng": <%= @center["lng"] %>
+		},
+	"markers": 
+		[
+		<% @doctors.each do |doctor| %>
+			{ 
+				"description":"<%= doctor.name %>",
+				"lat": <%= doctor.latitude %>,
+				"lng": <%= doctor.longitude %>
+			},
+		<% end %>
+			{
+				"description":"You",
+				"lat": <%= @center["lat"] %>,
+				"lng": <%= @center["lng"] %>
+			}
+		]
+}
