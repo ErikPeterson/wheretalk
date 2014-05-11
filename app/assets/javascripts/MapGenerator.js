@@ -31,6 +31,7 @@
 		this.handler.buildMap({provider:{
 				panControl: false,
 				scaleControl: false,
+				center: this.settings.center,
                 zoomControlOptions: {
                     style: google.maps.ZoomControlStyle.MEDIUM,
                     position: google.maps.ControlPosition.RIGHT_CENTER
@@ -41,12 +42,40 @@
 			});
 	};
 
+	MapGenerator.prototype.__geoInit = function(){
+		var geo = window.navigator.geolocation,
+			that = this;
+
+		if(geo){
+			geo.getCurrentPosition(function(loc){
+				var lat = loc.coords.latitude,
+					lng = loc.coords.longitude;
+				that.$el.attr('data-loc-lat', lat);
+				that.$el.attr('data-loc-long', lng);
+				that.settings.center.lat = lat;
+				that.settings.center.lng = lng;
+				that.clearMarkers();
+				that.drawMarker({lat: lat, lng: lng});
+			}, function(err){
+				alert("Couldn't geolocate. Try an address");
+			});
+		}	
+	};
+
+	MapGenerator.prototype.clearMarkers = function(){
+		if(this.__markers){
+			this.handler.removeMarkers(this.__markers);
+		}
+		this.markers = [];
+	};
+
 	MapGenerator.prototype.formatData = function(){
 		if(this.settings.mapType === 'profile'){
 			 this.__markerFromDataAttributes();
 		}
-
-		this.drawMarkers();
+		if(this.markers.length > 0){
+			this.drawMarkers();
+		}
 	};
 
 	MapGenerator.prototype.__markerFromDataAttributes = function(){
@@ -58,14 +87,25 @@
 		this.markers.push({lat: lat, lng: lng});
 	};
 
+	MapGenerator.prototype.drawMarker = function(marker){
+		this.markers.push(marker);
+		this.drawMarkers();
+	};
+
 	MapGenerator.prototype.drawMarkers = function(){
+		if(this.__markers){
+			this.handler.removeMarkers(this.__markers);
+		}
 		this.__markers = this.handler.addMarkers(this.markers);
 		this.centerAndZoom();
 	};
 
 	MapGenerator.prototype.centerAndZoom = function(){
-		if(this.settings.bounds === 'circle'){
-
+		this.handler.resetBounds();
+		if(this.settings.bounds === 'circle' || this.__markers.length === 1){
+			if(this.circle){
+				this.circle.clear();
+			}
 			this.circle = this.handler.addCircle({
 				lat: this.settings.center.lat,
 				lng: this.settings.center.lng,
@@ -75,10 +115,9 @@
 				visible: false,
 				clickable: false
 			});
-
 			this.handler.bounds.extendWith(this.circle);
-		}else{
-			this.handler.bound.extendWith(this.__markers);
+		} else{
+			this.handler.bounds.extendWith(this.__markers);
 		}
 
 

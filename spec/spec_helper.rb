@@ -41,5 +41,10 @@ RSpec.configure do |config|
   config.order = "random"
 end
 
-
+Capybara.register_driver :poltergeist do |app|
+  Capybara::Poltergeist::Driver.new(
+    app,
+    {extensions: [File.expand_path("../support/phantomjs_ext/simulate_location.js", __FILE__)], js_errors: false}
+  )
+end
 Capybara.javascript_driver = :poltergeist

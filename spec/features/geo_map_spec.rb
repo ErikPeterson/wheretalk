@@ -1,5 +1,4 @@
-include Warden::Test::Helpers
-Warden.test_mode!
+require 'spec_helper'
 
 describe "geolocation map", :js=>true do
 
@@ -10,22 +9,23 @@ describe "geolocation map", :js=>true do
 
   it "should initiate with geolocation API" do
     visit "/"
-    simulate_location 40, 73, page
-    click_on "Use My Location"
+    within :css, "#location-form" do
+       click_on "geo-init"
+    end
     sleep 0.2
-   	expect(page).to have_selector "div#map[data-loc-lat=40]"
-   	expect(page).to have_selector "div#map[data-loc-lng=73]"
+   	expect(page).to have_selector "div#map[data-loc-lat='40.714224']"
+   	expect(page).to have_selector "div#map[data-loc-long='-73.961452']"
   end
 
   it "should initiate with an address" do
   	visit "/"
-  	within :css, "#location-modal" do
-  		fill_in "Address", :with => "871 St. Marks Ave, Brooklyn, NY 11213"
-  		click_on "Submit"
+  	within :css, "#location-form" do
+  		fill_in "address", :with => "871 St. Marks Ave, Brooklyn, NY 11213"
+  		click_on "submit"
   	end
   	sleep 0.2
-  	expect(page).to have_sector "div#map[data-loc-lat]"
-  	expect(page).to have_sector "div#map[data-loc-lng]"
+  	expect(page).to have_selector "div#map[data-loc-lat]"
+  	expect(page).to have_selector "div#map[data-loc-long]"
   end
 
   it "should have a map"do

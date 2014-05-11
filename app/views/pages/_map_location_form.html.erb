@@ -1,10 +1,10 @@
 
-<form action="/get_ip" method="post" class="horizontal">
+<form id="location-form" class="horizontal">
 	<%= token_tag %>
 	<fieldset>
-		<input type="text" autofocus id="address-input" placeholder="129 West 81st St. Apt 5A..." name="address" />
+		<input type="text" autofocus id="address" placeholder="129 West 81st St. Apt 5A..." name="address" />
 		<div class="button-container">
-			<button type="submit" name="submit"><%= icon "chevron-right" %></button>
+			<button type="button" id="submit"><%= icon "chevron-right" %></button>
 			<button type="button" id="geo-init"><%= icon "location-arrow"%></button>
 		</div>
 	</fieldset>
