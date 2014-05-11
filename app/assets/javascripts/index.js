@@ -7,4 +7,8 @@ $(function(){
 		$('button#geo-init').on('click', function(){
 			map.__geoInit();
 		});
+
+		$('button#submit').on('click', function(){
+			map.__addressInit($('input#address').val());
+		});
 });

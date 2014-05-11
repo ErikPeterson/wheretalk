@@ -42,6 +42,13 @@
 			});
 	};
 
+	MapGenerator.prototype.__addressInit = function(address){
+		var addressData = {address: address},
+			that = this;
+		$.post("/geocode", addressData, function(data){
+			that.__markerFromAjax(JSON.parse(data));
+		});
+	};
 	MapGenerator.prototype.__geoInit = function(){
 		var geo = window.navigator.geolocation,
 			that = this;
@@ -68,6 +75,7 @@
 		}
 		this.markers = [];
 	};
+
 
 	MapGenerator.prototype.formatData = function(){
 		if(this.settings.mapType === 'profile'){
@@ -98,6 +106,16 @@
 		}
 		this.__markers = this.handler.addMarkers(this.markers);
 		this.centerAndZoom();
+	};
+
+
+	MapGenerator.prototype.__markerFromAjax = function(data){
+		this.clearMarkers();
+		this.$el.attr('data-loc-lat', data.location.lat);
+		this.$el.attr('data-loc-long', data.location.lng);
+		this.settings.center.lat = data.location.lat;
+		this.settings.center.lng = data.location.lng;
+		this.drawMarker(data.location);
 	};
 
 	MapGenerator.prototype.centerAndZoom = function(){
