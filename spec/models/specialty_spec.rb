@@ -26,7 +26,7 @@ describe Specialty do
   	@specialty.description = "Description of the test specialty."
   	@specialty.save
   	specialty2 = Specialty.new(:name => "Test Specialty", :description => "Test description 2.0");
-  	expect(@specialty2.save).to equal(false)
+  	expect(specialty2.save).to equal(false)
   end
-  
+
 end

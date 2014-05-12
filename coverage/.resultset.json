@@ -468,58 +468,6 @@
         null,
         null
       ],
-      "/Users/erik/Dev/wheretalk/db/schema.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null
-      ],
       "/Users/erik/Dev/wheretalk/app/controllers/geo_coding_controller.rb": [
         1,
         null,
@@ -812,6 +760,8 @@
       ],
       "/Users/erik/Dev/wheretalk/app/models/specialty.rb": [
         1,
+        1,
+        1,
         null
       ],
       "/Users/erik/Dev/wheretalk/spec/models/user_spec.rb": [
@@ -868,7 +818,7 @@
         null
       ]
     },
-    "timestamp": 1399931877
+    "timestamp": 1399931983
   },
   "Cucumber Features": {
     "coverage": {
