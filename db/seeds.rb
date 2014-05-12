@@ -42,3 +42,28 @@ users = User.create([
 	}
 
 	]);
+
+specialties = Specialty.create([
+	{
+		name: "Depression",
+		description: "Depression is a mental disorder characterized by a pervasive and persistent low mood that is accompanied by low self-esteem and by a loss of interest or pleasure in normally enjoyable activities."
+	},{
+		name: "Generalized Anxiety Disorder",
+		description: "Generalized anxiety disorder (GAD) is an anxiety disorder that is characterized by excessive, uncontrollable and often irrational worry. This excessive worry often interferes with daily functioning, as individuals suffering GAD typically anticipate disaster, and are overly concerned about everyday matters such as health issues, money, death, family problems, friendship problems, interpersonal relationship problems, or work difficulties."
+	},{
+		name: "Obsessive Compulsive Disorder",
+		description: "Obsessive–compulsive disorder (OCD) is an anxiety disorder characterized by intrusive thoughts that produce uneasiness, apprehension, fear, or worry; by repetitive behaviors aimed at reducing the associated anxiety; or by a combination of such obsessions and compulsions."
+	},{
+		name: "Substance Dependence",
+		description: "Substance dependence is a compulsive need to use psychoactive substances in order to function normally. Substance dependence encompasses both drug and alcohol dependencies."
+	},{
+		name: "Relationship Counseling",
+		description: "Relationship counseling is the process of counseling the parties of a relationship in an effort to recognize and to better manage or reconcile troublesome differences and repeating patterns of distress. The relationship involved may be between members of a family or a couple (see also family therapy), employees or employers in a workplace, or between a professional and a client."
+	},{
+		name: "Grief Counseling",
+		description: "Grief counseling is a form of psychotherapy that aims to help people cope with grief and mourning following the death of loved ones, or with major life changes that trigger feelings of grief (e.g., divorce)."
+	},{
+		name: "Personality Disorders",
+		description: "Personality disorders are a class of mental disorders characterised by enduring maladaptive patterns of behavior, cognition and inner experience, exhibited across many contexts and deviating markedly from those accepted by the individual's culture. These patterns develop early, are inflexible and are associated with significant distress or disability."
+	}
+]);	
