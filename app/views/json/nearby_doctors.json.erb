@@ -7,13 +7,14 @@
 		[
 		<% @doctors.each do |doctor| %>
 			{ 
-				"description":"<%= doctor.name %>",
+				"infowindow":"<div class=\"info-window\"><strong><%= doctor.name %></strong><br /><span><%= doctor.title %></span><br /><a href=\"/profiles/<%= doctor.id %>\" target=\"_blank\">View Profile</a></div>",
 				"lat": <%= doctor.latitude %>,
 				"lng": <%= doctor.longitude %>
 			},
 		<% end %>
 			{
-				"description":"You",
+				"picture": "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|00FF00",
+				"infowindow":"You",
 				"lat": <%= @center["lat"] %>,
 				"lng": <%= @center["lng"] %>
 			}

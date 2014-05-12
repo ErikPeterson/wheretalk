@@ -9,6 +9,7 @@ $(function(){
 		});
 
 		$('button#submit').on('click', function(){
+			map.settings.bounds='markers'
 			map.placesFromAddress($('input#address').val());
 		});
 });

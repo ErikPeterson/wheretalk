@@ -14,7 +14,7 @@ users = User.create([
 		degree: "PhD",
 		address: "81 West 81st St. New York, NY",
 		password: "cosmokramer",
-		password_confirmation: "comsmokramer"
+		password_confirmation: "cosmokramer"
 	},{
 		name: "Art Vandelay",
 		email: "boscolover@comcast.net",
@@ -28,17 +28,17 @@ users = User.create([
 		email: "kel_varnson@nyumed.edu",
 		title: "Psychotherapist",
 		degree: "PsyD",
-		address: "158 West 84th St. New York, NY",
+		address: "158 West 83th St. New York, NY",
 		password: "jerryseinfeld",
 		password_confirmation: "jerryseinfeld"
 	},{
-		name: "Dr. Paloma Benes",
-		email: "drbenes@gmail.com",
+		name: "Dr. Paloma Benez",
+		email: "drbenez@gmail.com",
 		title: "Behavorial Therapist",
 		degree: "PsyD",
-		address: "158 West 84th St. New York, NY",
-		password: "jerryseinfeld",
-		password_confirmation: "jerryseinfeld"
+		address: "158 West 82th St. New York, NY",
+		password: "elainebenes",
+		password_confirmation: "elainebenes"
 	}
 
 	]);
