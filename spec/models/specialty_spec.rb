@@ -29,4 +29,6 @@ describe Specialty do
   	expect(specialty2.save).to equal(false)
   end
 
+  
+
 end

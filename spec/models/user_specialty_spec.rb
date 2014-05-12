@@ -3,7 +3,7 @@ require 'spec_helper'
 describe UserSpecialty do
   before(:each) do
   	@specialty = Specialty.create(:name=>"Test", :description=>"Test test")
-  	@user = User.create(:email => "test@test.com", :name => "Dr. Test", :address => "129 West 81st St. New York City", :title => "Psychotherapist", :degree => "PhD")
+  	@user = User.create(:email => "test@test.com", :name => "Dr. Test", :address => "129 West 81st St. New York City", :title => "Psychotherapist", :degree => "PhD", :password=>"TestTest", :password_confirmation => "TestTest")
   	@user_specialty = UserSpecialty.new( :user_id=>@user.id, :specialty_id => @specialty.id, :user_notes => "I'm really, really, really good at this stuff.")
   end
 
@@ -27,7 +27,7 @@ describe UserSpecialty do
 
   it "can have an optional note from the user" do
   	@user_specialty.save
-  	expect(@user_specialty.user_notes).to equal("I'm really, really, really good at this stuff.")
+  	expect(@user_specialty.user_notes).to eq("I'm really, really, really good at this stuff.")
   end
 
   it "cannot hold more than 140 characters of notes" do

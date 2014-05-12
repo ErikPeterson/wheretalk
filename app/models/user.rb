@@ -13,5 +13,8 @@ class User < ActiveRecord::Base
 
   geocoded_by :address
   after_validation :geocode, :if => lambda{ |obj| obj.address_changed? }
+
+  has_many :user_specialties
+  has_many :specialties, :through => :user_specialties
   
 end
