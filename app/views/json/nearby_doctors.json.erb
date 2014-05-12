@@ -5,18 +5,12 @@
 		},
 	"markers": 
 		[
-		<% @doctors.each do |doctor| %>
+		<% @doctors.each_with_index do |doctor, i| %>
 			{ 
 				"infowindow":"<div class=\"info-window\"><strong><%= doctor.name %></strong><br /><span><%= doctor.title %></span><br /><a href=\"/profiles/<%= doctor.id %>\" target=\"_blank\">View Profile</a></div>",
 				"lat": <%= doctor.latitude %>,
 				"lng": <%= doctor.longitude %>
-			},
+			}<% if i != @doctors.length - 1 %>,<%end%>
 		<% end %>
-			{
-				"picture": "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|00FF00",
-				"infowindow":"You",
-				"lat": <%= @center["lat"] %>,
-				"lng": <%= @center["lng"] %>
-			}
 		]
 }

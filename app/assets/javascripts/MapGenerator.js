@@ -57,7 +57,7 @@
 			that = this;
 
 		$.ajax({type:"POST", url: "/geocode/near", data: addressData, success: function(data){
-			console.log(data);
+
 			that.__drawGroupFromAjax(data);
 		}, error: function(jqXHR, textStatus, errorThrown){
 			alert("Error: " + textStatus + ", " + errorThrown);
@@ -69,6 +69,8 @@
 		this.clearMarkers()
 		this.markers = markerObj.markers;
 		this.settings.center = markerObj.center;
+		this.$el.attr('data-loc-lat', this.settings.center.lat);
+		this.$el.attr('data-loc-long', this.settings.center.lng);
 		this.drawMarkers();
 	};
 
