@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :email, :presence => :true
+  validates :email, :presence => :true, :uniqueness => true
   validates_format_of :email,:with => Devise.email_regexp
   validates :name, :presence => :true
   validates :address, :presence => :true

@@ -41,7 +41,7 @@ users = User.create([
 		password_confirmation: "elainebenes"
 	}
 
-	]);
+]);
 
 specialties = Specialty.create([
 	{

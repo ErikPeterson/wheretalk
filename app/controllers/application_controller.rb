@@ -8,11 +8,12 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     "/profile/#{resource.id}"
   end
-
+  
   protected
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << [:name, :address, :title, :degree]
+    devise_parameter_sanitizer.for(:account_update) << [:name, :address, :title, :degree]
   end
 
 end
