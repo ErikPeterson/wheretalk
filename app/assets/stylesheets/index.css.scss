@@ -1,51 +1,145 @@
 @import 'support/variables';
 
-div#location-modal{
-	@include box-sizing(border-box);
+div#page-container{
 	
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
 
-	div.modal-form-container{
+	div#location-panel{
 		@include box-sizing(border-box);
+		position: relative;
+		padding: .5em 0;
+		width: 100%;
+		height: auto;
+		background: $primary-light-hi-sat;
 		
 
-			h1.modal-title{
-				font-size: 1.5em;
-				padding: 0 0 .25em 0;
-				margin: 0;
-			}
+		div.location-form-container{
+			@include box-sizing(border-box);
+	 		position: relative;
+	 		width: 100%;
+	 		padding: 1em 0;
+			
+				form#location-form{
+					@include box-sizing(border-box);
+					padding: 0;
+					margin: 0;
 
-			form.horizontal{
-				
-
-				fieldset{
-					
-					input{}
-					.chosen-container{
-					}
-					
-					.button-container{
+					fieldset{
+						@include box-sizing(border-box);
+						border: 0;
+						display: block;
+						text-align: center;
+						width: 100%;
+						height: auto;
+						padding: 0;
+						margin: 0;
+						font-size: 1em;
+						line-height: 2.5;
+						input{
+							width: 200px;
+							padding: 0.25em;
+							font-size: 1em;
+						}
+						input#distance{
+							width: 3.8em;
+						}
+						input, .chosen-container{
+							@include box-sizing(border-box);
+							font-size: 1em;
+							display: inline-block;
+							position: relative;
+							margin: 0 .25em 0 .25em;
+							vertical-align: middle;
+							height: auto;
+							line-height: 1;
+							
+							li.search-choice{
+								padding: 5px 20px 5px 7px;
+								background: $primary-light-lo-sat;
+								width: auto !important;
+								line-height: 1.25;
+								font-size: .75em;
+							}
+						}
+						.chosen-container.active{
+							height: auto !important;
+						}
 						button{
+							@include box-sizing(border-box);
+							background: $primary-dark-lo-sat;
+							height: 2.5em;
+							padding: .5em;
+							font-size: .75em;
+							line-height: 1em;
+							color: white;
+							border: 0;
+							width: 2.5em;
+							cursor: pointer;
+							display: inline-block;
+							vertical-align: middle;
 						}
 						button:hover{
+							color: $font-color;
 						}
 					}
 				}
+		}
+	}
+
+	div#map-panel{
+	 width: 100%;
+	 height: 400px;
+	 	div.info-window.doctor-profile{
+				width: 200px;
+				height: auto;
+				padding: .5em 0 .5em .5em;
+				text-align: left;
+
+				img{
+					width: 200px;
+					height: auto;
+				}
 			}
 	}
-}
 
-div.map-container{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	min-height: 400px;
-	div#map{
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		left: 0;
+	@media screen and (min-width: 720px){
+		@include box-sizing(border-box);
 		top: 0;
-		margin: 0;
-		padding: 0;
+		left: 0;
+		padding: 2.25em 0 0 0;
+		height: 100%;
+		position: fixed;
+
+		div#location-panel{
+			position: absolute;
+			top: 3.25em;
+			left: 1em;
+			width: 300px;
+			padding: 1em;
+			height: auto;
+			float: none;
+			z-index: 2;
+		}
+
+		div#map-panel{
+			@include box-sizing(border-box);
+			position: absolute;
+			float: none;
+			width: 100%;
+			height: 100%;
+			min-height: 400px;
+
+			div#map{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				padding: 2.25em 0 0 0;
+			}
+		}
 	}
 }

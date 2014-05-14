@@ -25,5 +25,5 @@ $(function(){
 			map.placesFromAddress($('input#address').val());
 		});
 
-		$("select").chosen({disable_search_threshold: 10, width: '250px'});
+		$("select").chosen({disable_search_threshold: 10, width: '200px'});
 });

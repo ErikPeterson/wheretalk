@@ -1,26 +1,22 @@
 
-<form id="location-form" class="horizontal">
+<form id="location-form">
 	<%= token_tag %>
 	<fieldset>
-		<span class="fieldtext">I'm looking for a mental health practitioner that specializes in </span>
-		<select id="specialties" data-placeholder="Areas of Treatmeant" name="specialties" multiple>
+		<span class="fieldtext">I'm looking for a mental health practitioner that specializes in <br /></span>
+		<select id="specialties" data-placeholder="these areas of treatmeant" name="specialties" multiple>
 			<% @specialties.each do |specialty| %>
 				<option value="<%= specialty.id %>"><%= specialty.name %></option>
 			<% end %>
 		</select>
-	</fieldset>
-	<fieldset>
-		<span class="fieldtext"> within </span>
-		<input id="distance" name="distance" type="number" min="0.25" max="50" />
-		<span class="fieldtext"> miles of my location.</span>
-	</fieldset>
-	<fieldset>
+		<span class="fieldtext"><br /> within </span>
+		<input class="inline" id="distance" name="distance" type="number" min="0.25" max="50" placeholder="0.25" />
+		<span class="fieldtext"> miles of me.</span>
 
-		<span class="fieldtext"> ( use my address: </span>
-		<input type="text" autofocus id="address" placeholder="123 First Avenue New York, NY" name="address" />
-		<button type="button" id="submit"><%= icon "chevron-right" %></button>
-		<span class="fieldtext">/ geolocate me: </span> 
+		<span class="fieldtext"><br />Use my address: </span>
+		<input class="inline" type="text" autofocus id="address" placeholder="123 First Avenue New York, NY" name="address" />
+		<button type="button" id="submit"><span>Go</span></button>
+		<span class="fieldtext"><br />Use my location: </span> 
 		<button type="button" id="geo-init"><%= icon "location-arrow"%></button>
-		<span class="fieldtext"> )</span> 
+		<span class="fieldtext"> </span> 
 	</fieldset>
 </form>

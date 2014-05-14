@@ -89,7 +89,7 @@
 		this.settings.center = markerObj.center;
 		this.$el.attr('data-loc-lat', this.settings.center.lat);
 		this.$el.attr('data-loc-long', this.settings.center.lng);
-		this.drawMarkers();
+
 	};
 
 
@@ -130,6 +130,8 @@
 		}
 		this.__markers = this.handler.addMarkers(this.markers);
 		this.centerAndZoom();
+
+		
 	};
 
 

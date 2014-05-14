@@ -1,11 +1,12 @@
-<div id="location-modal" class="section">
-	<div class="modal-form-container">
+<div id="page-container">
+<div id="location-panel" class="section">
+	<div class="location-form-container">
 		<%= render :partial => 'map_location_form' %>
-		</div>
 	</div>
 </div>
-<div class="map-container" class="section">
+<div id="map-panel" class="section">
 	<div id="map" class="geo-loc">
 	</div>
+</div>
 </div>
 <%= javascript_include_tag 'index.js' %>
