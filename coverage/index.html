@@ -14,27 +14,27 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-05-13T23:47:57-04:00">2014-05-13T23:47:57-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-05-14T04:30:13-04:00">2014-05-14T04:30:13-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.71%</span></span>
+    (<span class="covered_percent"><span class="green">95.44%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.83
+         1.76
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>31</b> files in total.
-    <b>345</b> relevant lines. 
-    <span class="green"><b>344</b> lines covered</span> and
-    <span class="red"><b>1</b> lines missed </span>
+    <b>30</b> files in total.
+    <b>329</b> relevant lines. 
+    <span class="green"><b>314</b> lines covered</span> and
+    <span class="red"><b>15</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,22 +62,22 @@
       
       <tr>
         <td class="strong"><a href="#67a9c3b7eaf49463bc8642be3d4f14799045a1b6" class="src_link" title="app/controllers/geo_coding_controller.rb">app/controllers/geo_coding_controller.rb</a></td>
-        <td class="green strong">100.0 %</td>
+        <td class="red strong">12.5 %</td>
+        <td>27</td>
         <td>16</td>
-        <td>10</td>
-        <td>10</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td>2</td>
+        <td>14</td>
+        <td>0.1</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#7a122f119cfe48fc2ecb37ea6c4497aa236b6f90" class="src_link" title="app/controllers/pages_controller.rb">app/controllers/pages_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>12</td>
-        <td>6</td>
-        <td>6</td>
+        <td>13</td>
+        <td>7</td>
+        <td>7</td>
         <td>0</td>
-        <td>5.0</td>
+        <td>4.6</td>
       </tr>
       
       <tr>
@@ -291,16 +291,6 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#95587a0a4127fae6a3900da8a404e03e5d328664" class="src_link" title="spec/features/geo_map_spec.rb">spec/features/geo_map_spec.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>36</td>
-        <td>23</td>
-        <td>23</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
         <td class="strong"><a href="#0c6f703d811d76e4a0499e44bd98426dd6419009" class="src_link" title="spec/features/profile_map_spec.rb">spec/features/profile_map_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>35</td>
@@ -357,7 +347,7 @@
         <td>11</td>
         <td>11</td>
         <td>0</td>
-        <td>11.2</td>
+        <td>9.7</td>
       </tr>
       
     </tbody>
@@ -423,7 +413,7 @@
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">  before_action :configure_permitted_parameters, if: :devise_controller?</code>
+          <code class="ruby">  before_action :configure_permitted_parameters, if: :devise_controller? </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
@@ -511,11 +501,11 @@
         <div class="source_table" id="67a9c3b7eaf49463bc8642be3d4f14799045a1b6">
   <div class="header">
     <h3>app/controllers/geo_coding_controller.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">12.5 %</span> covered</h4>
     <div>
-      <b>10</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>16</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>14</b> lines missed.</span>
     </div>
   </div>
   
@@ -546,73 +536,139 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="5">
+          
           
           <code class="ruby">		location = params[&quot;location&quot;]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="6">
+          
           
           <code class="ruby">		results = Geocoder.search(location)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="missed" data-hits="0" data-linenumber="7">
+          
+          
+          <code class="ruby">		distance = params[:distance]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
           
           <code class="ruby">		return render :inline=&gt;&#39;{&quot;error&quot;:&quot;Address not locatable&quot;}&#39; if !results[0] || !results[0].data</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby">		</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="11">
+          
+          
+          <code class="ruby">		specialty_ids = params[&quot;tags&quot;].map(&amp;:to_i)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="12">
+          
           
           <code class="ruby">		location_object = results[0].data</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="13">
+          
           
           <code class="ruby">		@center = location_object[&quot;geometry&quot;][&quot;location&quot;]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="14">
+          
           
           <code class="ruby">		@formatted_address = location_object[&quot;formatted_address&quot;];</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
-          
-          <code class="ruby">		@doctors = User.near(@formatted_address)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
-          
-          <code class="ruby">		render :template=&gt; &#39;json/nearby_doctors&#39;, :layout =&gt; false, :content_type =&gt; &#39;application/json&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="16">
+          
+          
+          <code class="ruby">		doctors = User.near(@formatted_address, distance)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="17">
+          
+          
+          <code class="ruby">		if doctors</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="18">
+          
+          
+          <code class="ruby">			@doctors = doctors.reject do |el| </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="19">
+          
+          
+          <code class="ruby">				(specialty_ids &amp; el.specialty_ids) != specialty_ids</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">			end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">		else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="22">
+          
+          
+          <code class="ruby">			@doctors = []</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="25">
+          
+          
+          <code class="ruby">		render :template=&gt; &#39;json/nearby_doctors&#39;, :layout =&gt; false, :content_type =&gt; &#39;application/json&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
           <code class="ruby">	end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">end</code>
@@ -627,8 +683,8 @@
     <h3>app/controllers/pages_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -654,55 +710,61 @@
           <code class="ruby">	def index</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="2" data-linenumber="4">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">	end</code>
+          <code class="ruby">		@specialties = Specialty.order(:name)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
           <code class="ruby">	def profile</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="7">
+        <li class="covered" data-hits="16" data-linenumber="8">
           <span class="hits">16</span>
           
           <code class="ruby">		return redirect_to &quot;/users/edit&quot; if current_user &amp;&amp; !params[:id]</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="8">
+        <li class="covered" data-hits="6" data-linenumber="9">
           <span class="hits">6</span>
           
           <code class="ruby">		return redirect_to &quot;/users/sign_in&quot; if !current_user &amp;&amp; !params[:id]</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="9">
+        <li class="covered" data-hits="5" data-linenumber="10">
           <span class="hits">5</span>
           
           <code class="ruby">		@doctor = User.find(params[:id]);</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">	end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">end</code>
@@ -4720,240 +4782,6 @@
   </pre>
 </div>
       
-        <div class="source_table" id="95587a0a4127fae6a3900da8a404e03e5d328664">
-  <div class="header">
-    <h3>spec/features/geo_map_spec.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>23</b> relevant lines. 
-      <span class="green"><b>23</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
-    <ol>
-      
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
-          
-          <code class="ruby">require &#39;spec_helper&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="2">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
-          
-          <code class="ruby">describe &quot;geolocation map&quot;, :js=&gt;true do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="4">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  it &quot;appears on the index page&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    visit &quot;/&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    expect(page).to have_selector &#39;div#map&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="8">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  it &quot;should initiate with geolocation API&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    visit &quot;/&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="12">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    within :css, &quot;#location-form&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
-          
-          <code class="ruby">       click_on &quot;geo-init&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="14">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    sleep 0.2</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
-          
-          <code class="ruby">   	expect(page).to have_selector &quot;div#map[data-loc-lat=&#39;40.714224&#39;]&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
-          
-          <code class="ruby">   	expect(page).to have_selector &quot;div#map[data-loc-long=&#39;-73.961452&#39;]&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="18">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  it &quot;should initiate with an address&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  	visit &quot;/&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  	within :css, &quot;#location-form&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  		fill_in &quot;address&quot;, :with =&gt; &quot;871 St. Marks Ave, Brooklyn, NY 11213&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="24">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  		click_on &quot;submit&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="25">
-          
-          
-          <code class="ruby">  	end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="26">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  	sleep 0.2</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="27">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  	expect(page).to have_selector &quot;div#map[data-loc-lat]&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="28">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  	expect(page).to have_selector &quot;div#map[data-loc-long]&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="29">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="30">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="31">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  it &quot;should have a map&quot;do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="32">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  	visit &quot;/&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="33">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  	expect(page).to have_selector &quot;div.gm-style&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="34">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="35">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="36">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-    </ol>
-  </pre>
-</div>
-      
         <div class="source_table" id="0c6f703d811d76e4a0499e44bd98426dd6419009">
   <div class="header">
     <h3>spec/features/profile_map_spec.rb</h3>
@@ -6318,8 +6146,8 @@
           <code class="ruby">  config.before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="37" data-linenumber="8">
-          <span class="hits">37</span>
+        <li class="covered" data-hits="33" data-linenumber="8">
+          <span class="hits">33</span>
           
           <code class="ruby">    DatabaseCleaner.strategy = :transaction</code>
         </li>
@@ -6342,8 +6170,8 @@
           <code class="ruby">  config.before(:each, :js =&gt; true) do</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="12">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
           
           <code class="ruby">    DatabaseCleaner.strategy = :truncation</code>
         </li>
@@ -6366,8 +6194,8 @@
           <code class="ruby">  config.before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="37" data-linenumber="16">
-          <span class="hits">37</span>
+        <li class="covered" data-hits="33" data-linenumber="16">
+          <span class="hits">33</span>
           
           <code class="ruby">    DatabaseCleaner.start</code>
         </li>
@@ -6390,8 +6218,8 @@
           <code class="ruby">  config.after(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="37" data-linenumber="20">
-          <span class="hits">37</span>
+        <li class="covered" data-hits="33" data-linenumber="20">
+          <span class="hits">33</span>
           
           <code class="ruby">    DatabaseCleaner.clean</code>
         </li>

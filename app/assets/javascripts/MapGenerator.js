@@ -32,6 +32,7 @@
 				panControl: false,
 				scaleControl: false,
 				center: this.settings.center,
+				tags: [],
                 zoomControlOptions: {
                     style: google.maps.ZoomControlStyle.MEDIUM,
                     position: google.maps.ControlPosition.RIGHT_CENTER
@@ -42,20 +43,12 @@
 			});
 	};
 
-	MapGenerator.prototype.__addressInit = function(address){
-		var addressData = {address: address},
-			that = this;
-		$.post("/geocode", addressData, function(data){
-			that.__markerFromAjax(JSON.parse(data));
-		});
-	};
-
 
 	MapGenerator.prototype.placesFromAddress = function(address){
 
-		var addressData = {location: address},
+		var addressData = {location: address, distance: this.settings.distance, tags: this.settings.tags},
 			that = this;
-
+			
 		$.ajax({type:"POST", url: "/geocode/near", data: addressData, success: function(data){
 
 			that.__drawGroupFromAjax(data);
@@ -99,25 +92,6 @@
 		this.drawMarkers();
 	};
 
-	MapGenerator.prototype.__geoInit = function(){
-		var geo = window.navigator.geolocation,
-			that = this;
-
-		if(geo){
-			geo.getCurrentPosition(function(loc){
-				var lat = loc.coords.latitude,
-					lng = loc.coords.longitude;
-				that.$el.attr('data-loc-lat', lat);
-				that.$el.attr('data-loc-long', lng);
-				that.settings.center.lat = lat;
-				that.settings.center.lng = lng;
-				that.clearMarkers();
-				that.drawMarker({lat: lat, lng: lng});
-			}, function(err){
-				alert("Couldn't geolocate. Try an address");
-			});
-		}	
-	};
 
 	MapGenerator.prototype.clearMarkers = function(){
 		if(this.__markers){

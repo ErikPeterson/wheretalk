@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 	
 	def index
+		@specialties = Specialty.order(:name)
 	end
 
 	def profile
