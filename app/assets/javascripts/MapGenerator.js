@@ -65,6 +65,31 @@
 
 	};
 
+	MapGenerator.prototype.placesFromGeo = function(){
+
+		var geo = window.navigator.geolocation,
+			that = this,
+			lat,
+			lng;
+
+		if(geo){
+			geo.getCurrentPosition(function(loc){
+				lat = loc.coords.latitude;
+				lng = loc.coords.longitude;
+				that.$el.attr('data-loc-lat', lat);
+				that.$el.attr('data-loc-long', lng);
+				that.settings.center.lat = lat;
+				that.settings.center.lng = lng;
+				that.placesFromAddress(String(lat) + ", " + String(lng));
+			}, function(err){
+				alert("Couldn't geolocate. Try an address");
+			});
+
+		}
+
+
+	};
+
 	MapGenerator.prototype.__drawGroupFromAjax = function(markerObj){
 		this.clearMarkers()
 		this.markers = markerObj.markers;
