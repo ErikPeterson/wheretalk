@@ -12,8 +12,8 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << [:name, :address, :title, :degree]
-    devise_parameter_sanitizer.for(:account_update) << [:name, :address, :title, :degree, {:specialty_names => []}]
+    devise_parameter_sanitizer.for(:sign_up) << [:name, :address, :title, :degree, :phone]
+    devise_parameter_sanitizer.for(:account_update) << [:name, :address, :title, :phone, :degree, {:specialty_names => []}]
   end
 
 end

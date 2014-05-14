@@ -45,6 +45,8 @@ gem 'font-awesome-sass'
 
 gem 'faker'
 
+gem 'phony_rails'
+
 group :development, :test do 
 	gem 'capybara'
 	gem 'rspec-rails'

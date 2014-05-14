@@ -4,6 +4,8 @@
 		<div class="title-card">
 			<h1 class="name"><%= @doctor.name %></h1> <small><%= @doctor.degree %></small><br />
 			<span class="subhed title"><%= @doctor.title %></span>
+			<h4 class="profile-section-title">Phone:</h4>
+			<span><%= @doctor.phone.phony_formatted(:spaces => "-") %></span>
 			
 			<h4 class="profile-section-title">Address:</h4>
 

@@ -15,6 +15,10 @@ div.profile{
 	 		margin-left: .5em;
 	 	}
 
+	 	h4{
+	 		margin-bottom: 0;
+	 	}
+
 	 	.title-card{
 			@include box-sizing(border-box);
 	 		position: relative;
