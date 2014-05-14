@@ -3,9 +3,15 @@ $(function(){
 		y = -73.97535599999999;
 		window.map = new MapGenerator('#map', { bounds: 'circle', distance: 1, mapType: 'geo', center: { lat: x, lng: y } });
 
-		map.placesFromAddress(String(x) + ", " + String(y));
 
 		$('button#geo-init').on('click', function(){
+			var distance = $("input[name='distance']").val();
+
+			if(+distance < 0.25 ){
+				alert("Please enter a valid distance.")
+				return;
+			}
+
 			$('#map').addClass("loading");
 
 			return (function(){
