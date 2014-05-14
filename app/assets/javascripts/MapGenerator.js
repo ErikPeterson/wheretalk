@@ -149,6 +149,7 @@
 
 	MapGenerator.prototype.centerAndZoom = function(){
 		this.handler.resetBounds();
+		
 		if(this.settings.bounds === 'circle' || this.__markers.length === 1){
 			if(this.circle){
 				this.circle.clear();
