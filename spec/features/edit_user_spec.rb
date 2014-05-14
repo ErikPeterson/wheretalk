@@ -61,7 +61,7 @@ describe "Edit profile page" do
   	end
 
   	it "should allow the user to remove a specialty" do
-  		click_on "input[value='#{@specialty1.name}']"
+  		uncheck "#{@specialty1.name}"
   		fill_in "user[current_password]", :with => @user.password
   		click_on "Update"
   		@user.reload
@@ -70,8 +70,8 @@ describe "Edit profile page" do
   	end
 
   	it "should allow the user to add a specialty" do
-  		click_on "input[value='#{specialty1.name}"
-		fill_in "user[current_password]", :with => @user.password
+  		check "#{@specialty2.name}"
+		  fill_in "user[current_password]", :with => @user.password
   		click_on "Update"
   		@user.reload
 

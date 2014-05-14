@@ -16,5 +16,15 @@ class User < ActiveRecord::Base
 
   has_many :user_specialties
   has_many :specialties, :through => :user_specialties
+
+  def specialty_names=(names)
+    user_specialties.destroy_all
+    names.each do |name|
+      specialty = Specialty.find_by(:name=>name)
+      if specialty
+        specialties << specialty
+      end
+    end
+  end
   
 end
