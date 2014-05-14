@@ -7,7 +7,7 @@
 		[
 		<% @doctors.each_with_index do |doctor, i| %>
 			{ 
-				"infowindow":"<div class=\"info-window doctor-profile\"><%= j image_tag doctor.photo_url, :class => "map-portrait" %><strong><%= doctor.name %></strong><br /><span><%= doctor.title %></span><br /><a href=\"/profiles/<%= doctor.id %>\" target=\"_blank\">View Profile</a></div>",
+				"infowindow":"<div class=\"info-window doctor-profile\"><%= j image_tag asset_path(doctor.photo_url), :class => "map-portrait" %><strong><%= doctor.name %></strong><br /><span><%= doctor.title %></span><br /><a href=\"/profiles/<%= doctor.id %>\" target=\"_blank\">View Profile</a></div>",
 				"lat": <%= doctor.latitude %>,
 				"lng": <%= doctor.longitude %>
 			}<% if i != @doctors.length - 1 %>,<%end%>

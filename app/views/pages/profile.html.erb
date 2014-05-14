@@ -1,6 +1,6 @@
 <div class="profile">
 	<div class="container profile-card">
-		<div class="photo-container-200"><%= image_tag @doctor.photo_url, :class => 'profile-image' %></div>
+		<div class="photo-container-200"><%= image_tag asset_path(@doctor.photo_url), :class => 'profile-image' %></div>
 		<div class="title-card">
 			<h1 class="name"><%= @doctor.name %></h1> <small><%= @doctor.degree %></small><br />
 			<span class="subhed title"><%= @doctor.title %></span>
