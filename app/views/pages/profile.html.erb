@@ -1,13 +1,23 @@
 <div class="profile">
 	<div class="container profile-card">
-		<%= image_tag 'profile.jpg', :class => 'profile-image' %>
+		<div class="photo-container-200"><%= image_tag @doctor.photo_url, :class => 'profile-image' %></div>
 		<div class="title-card">
 			<h1 class="name"><%= @doctor.name %></h1> <small><%= @doctor.degree %></small><br />
 			<span class="subhed title"><%= @doctor.title %></span>
-		
-		<p class="address">
-			<%= @doctor.address.split(', ').join(',<br />').html_safe %>
-		</p>
+			
+			<h4 class="profile-section-title">Address:</h4>
+
+			<p class="address">
+				<%= @doctor.address.split(', ').join(',<br />').html_safe %>
+			</p>
+
+			<h4 class="profile-section-title">Specializes In:</h4>
+
+			<ul class="specialties">
+			<% @doctor.specialties.each do |spec| %>
+			<li><%= spec.name %></li>
+				<% end %>
+			</ul>
 
 		</div>
 	</div>
