@@ -35,3 +35,22 @@ main{
 .container > .container{
 	float: left;
 }
+
+#map.loading::after{
+	@include box-sizing(border-box);
+	text-align: center;
+	font-size: 1em;
+	line-height: 1;
+	padding-top: 16px;
+	display: block;
+	position: absolute;
+	width: 150px;
+	height: 50px;
+	z-index: 10000;
+	left: 50%;
+	margin-left: -50px;
+	top: 50%;
+	margin-top: -50px;
+	background-color: white;
+	content:"Loading...";
+}

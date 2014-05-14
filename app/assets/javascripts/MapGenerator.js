@@ -49,10 +49,12 @@
 		var addressData = {location: address, distance: this.settings.distance, tags: this.settings.tags},
 			that = this;
 			
-		$.ajax({type:"POST", url: "/geocode/near", data: addressData, success: function(data){
+		this.$el.addClass("loading");
 
+		$.ajax({type:"POST", url: "/geocode/near", data: addressData, success: function(data){
 			that.__drawGroupFromAjax(data);
 		}, error: function(jqXHR, textStatus, errorThrown){
+			that.$el.removeClass("loading");
 			alert("Error: " + textStatus + ", " + errorThrown);
 		}});
 
@@ -90,7 +92,7 @@
 		this.$el.attr('data-loc-lat', this.settings.center.lat);
 		this.$el.attr('data-loc-long', this.settings.center.lng);
 		this.drawMarkers();
-		
+		this.$el.removeClass("loading");
 	};
 
 

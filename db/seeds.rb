@@ -145,6 +145,7 @@ doctors = User.all
 specs = Specialty.all
 photos = ['female-doctor-1.jpg', 'female-doctor-2.jpg', 'male-doctor.jpg']
 doctors.all.each do |doctor|
-	doctor.photo_url = photos.sample(1)
+	doctor.photo_url = photos.sample(1)[0]
+	doctor.save
 	doctor.specialties << specs.sample(2)
 end
