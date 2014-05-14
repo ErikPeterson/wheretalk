@@ -4,6 +4,8 @@ WhereTalk is a tool that seeks to remove a hurdle for patients seeking mental he
 
 When a user visits the site, they are presented with a map. They can enter an address, or use geolocation to pin themselves on the map and find practictioners within their distance limit. They can also select a list of specialties or areas of treatment they feel match their symptoms, and narrow their search to doctors who have listed those specialties on their profile.
 
+A working demo of WhereTalk is available at http://wheretalk.herokuapp.com.
+
 ##Features:
 
 ###Registration:
