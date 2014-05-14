@@ -10,6 +10,8 @@ describe "profile map" do
 			:email => "test@test.com",
 			:name => "Dr. Test McTest",
 			:title => "Psychiatrist",
+      :phone => Faker::PhoneNumber.phone_number,
+      :photo_url => "male-doctor.jpg",
 			:degree => "PhD",
 			:address => "129 West 81st St. #5A, New York, New York, 10024",
 			:password => "Testing123!",

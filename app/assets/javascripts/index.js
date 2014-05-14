@@ -1,7 +1,9 @@
 $(function(){
 	var x = 40.783871,
 		y = -73.97535599999999;
-		window.map = new MapGenerator('#map', { bounds: 'circle', distance: 1, mapType: 'geo', center: { lat: x, lng: y } },[{ lat: x, lng: y}]);
+		window.map = new MapGenerator('#map', { bounds: 'circle', distance: 1, mapType: 'geo', center: { lat: x, lng: y } });
+
+		map.placesFromAddress(String(x) + ", " + String(y));
 
 		$('button#geo-init').on('click', function(){
 			$('#map').addClass("loading");
