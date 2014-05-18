@@ -72,6 +72,8 @@ div.profile{
 			height: auto;
 			float: none;
 			z-index: 2;
+			max-height: 90%;
+			overflow-y: auto;
 			img{
 				margin: 0 0 1em 0;
 				padding: 0;
