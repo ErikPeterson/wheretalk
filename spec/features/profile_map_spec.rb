@@ -16,7 +16,7 @@ describe "profile map" do
 			:address => "129 West 81st St. #5A, New York, New York, 10024",
 			:password => "Testing123!",
 			:password_confirmation => "Testing123!",
-		})
+		});
 	end
 
   it "appears on the profile page" do

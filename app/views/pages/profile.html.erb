@@ -22,12 +22,13 @@
 			</ul>
 
 			<h4 class="profile-section-title">Free During:</h4>
-
+			<% if @doctor.schedule %>
 			<ul class="schedule">
 			<% @doctor.schedule.free_blocks.order(:day_number).each do |free_block| %>
 			<li><%= free_block.day_name %>s, <%= free_block.start_time %> to <%= free_block.end_time %></li>
 				<% end %>
 			</ul>
+			<% end %>
 
 		</div>
 	</div>
