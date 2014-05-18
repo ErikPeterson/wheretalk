@@ -433,10 +433,12 @@
         null,
         1,
         null,
-        31,
-        31,
+        33,
+        33,
         null,
         1,
+        1,
+        null,
         1,
         null,
         1,
@@ -451,9 +453,9 @@
         null,
         1,
         1,
-        27,
-        27,
-        26,
+        29,
+        29,
+        28,
         null,
         null,
         null,
@@ -477,7 +479,7 @@
         null,
         null,
         1,
-        33,
+        35,
         null,
         null,
         1,
@@ -485,11 +487,11 @@
         null,
         null,
         1,
-        33,
+        35,
         null,
         null,
         1,
-        33,
+        35,
         null,
         null,
         null
@@ -816,6 +818,51 @@
         null,
         null
       ],
+      "/Users/erik/Dev/wheretalk/spec/models/free_block_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/erik/Dev/wheretalk/app/models/free_block.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/erik/Dev/wheretalk/spec/models/schedule_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/erik/Dev/wheretalk/app/models/schedule.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
       "/Users/erik/Dev/wheretalk/spec/models/specialty_spec.rb": [
         1,
         null,
@@ -982,7 +1029,7 @@
         null
       ]
     },
-    "timestamp": 1400104591
+    "timestamp": 1400444340
   },
   "Cucumber Features": {
     "coverage": {

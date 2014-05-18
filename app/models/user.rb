@@ -22,6 +22,8 @@ class User < ActiveRecord::Base
   has_many :user_specialties
   has_many :specialties, :through => :user_specialties
 
+  has_one :schedule
+
   def specialty_names=(names)
     user_specialties.destroy_all
     names.each do |name|
