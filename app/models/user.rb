@@ -23,6 +23,7 @@ class User < ActiveRecord::Base
   has_many :specialties, :through => :user_specialties
 
   has_one :schedule
+  has_many :free_blocks, :through => :schedule
 
   def specialty_names=(names)
     user_specialties.destroy_all

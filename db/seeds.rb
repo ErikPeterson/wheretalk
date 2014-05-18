@@ -158,6 +158,8 @@ doctors = User.all
 specs = Specialty.all
 photos = ['female-doctor-1.jpg', 'female-doctor-2.jpg', 'male-doctor.jpg']
 doctors.all.each do |doctor|
+	doctor.create_schedule
+	doctor.schedule.free_blocks << FreeBlock.new(:start_time => "8:00 am", :end_time => "9:00 am", :day_number=> 1)
 	doctor.photo_url = photos.sample(1)[0]
 	doctor.save
 	doctor.specialties << specs.sample(2)
