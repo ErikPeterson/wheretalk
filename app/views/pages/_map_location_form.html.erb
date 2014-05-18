@@ -10,8 +10,13 @@
 		</select>
 		<span class="fieldtext"><br /> within </span>
 		<input class="inline" id="distance" name="distance" type="number" min="0.25" max="50" placeholder="0.25" />
-		<span class="fieldtext"> miles of me.</span>
-
+		<span class="fieldtext"> miles of me that accepts </span>
+		<select id="payment-methods" data-placeholder="this insurer or payment method" name="payment-methods">
+				<option></option>
+			<% @payment_methods.each do |pm| %>
+				<option value="<%= pm.id %>"><%= pm.name %></option>
+			<% end %>
+		</select>
 		<span class="fieldtext"><br />Use my address: </span>
 		<input class="inline" type="text" autofocus id="address" placeholder="123 First Avenue New York, NY" name="address" />
 		<button type="button" id="submit"><span>Go</span></button>

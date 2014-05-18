@@ -6,12 +6,20 @@ def get_nearby
 		results = Geocoder.search(location)
 		distance = params[:distance]
 		specialties = params[:tags]
+		payment_methods = params[:paymentMethods]
+
 		return render :inline=>'{"error":"Address not locatable"}' if !results[0] || !results[0].data
 
 		if specialties
-			specialty_ids = params["tags"].map(&:to_i)
+			specialty_ids = specialties.map(&:to_i)
 		else
 			specialty_ids = []
+		end
+
+		if payment_methods
+			payment_method_ids = payment_methods.map(&:to_i)
+		else
+			payment_method_ids = []
 		end
 
 		location_object = results[0].data
@@ -24,8 +32,11 @@ def get_nearby
 				@doctors = doctors.reject do |el| 
 					(specialty_ids & el.specialty_ids) != specialty_ids
 				end
-			else
-				@doctors = doctors
+			end
+			if !payment_method_ids.empty?
+				@doctors = @doctors.reject do |el|
+					(payment_method_ids & el.payment_method_ids) != payment_method_ids
+				end
 			end
 		else
 			@doctors = []

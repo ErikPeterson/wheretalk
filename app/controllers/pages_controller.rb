@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 	
 	def index
 		@specialties = Specialty.order(:name)
+		@payment_methods = PaymentMethod.order(:name)
 	end
 
 	def profile

@@ -6,6 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
+paymentmethods = PaymentMethod.create([
+	{:name => "Aetna PPO"},
+	{:name => "Out of Pocket"},
+	{:name => "Blue Cross Blue Shield"},
+	{:name => "Harvard Pilgrim"},
+	{:name => "Health First"},
+	{:name => "Insurer Plus"}
+	]);
+
 users = User.create([
 	{
 		name: "Dr. Peter Von Nostrand",
@@ -157,7 +167,9 @@ specialties = Specialty.create([
 doctors = User.all
 specs = Specialty.all
 photos = ['female-doctor-1.jpg', 'female-doctor-2.jpg', 'male-doctor.jpg']
+pms = PaymentMethod.all
 doctors.all.each do |doctor|
+	doctor.payment_methods << pms.sample(4)
 	doctor.create_schedule
 	doctor.schedule.free_blocks << FreeBlock.new(:start_time => "8:00 am", :end_time => "9:00 am", :day_number=> 1)
 	doctor.photo_url = photos.sample(1)[0]

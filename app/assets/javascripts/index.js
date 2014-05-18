@@ -18,8 +18,13 @@ $(function(){
 				map.settings.bounds='markers'
 				map.settings.distance=$("input[name='distance']").val();
 				map.settings.tags = (function(){
-					return _.chain($("option")).filter(function(el){ return el.selected; }).map(function(el){return $(el).val()})._wrapped;
+					return _.chain($("#specialties option")).filter(function(el){ return el.selected; }).map(function(el){return $(el).val()})._wrapped;
 				}());
+
+				map.settings.paymentMethods = (function(){
+					return _.chain($("#payment-methods option")).filter(function(el){ return el.selected && $(el).val !== ""; }).map(function(el){return $(el).val()})._wrapped;
+				}());
+
 
 				map.placesFromGeo(); 
 			}());
@@ -42,12 +47,17 @@ $(function(){
 				map.settings.distance=$("input[name='distance']").val();
 
 				map.settings.tags = (function(){
-					return _.chain($("option")).filter(function(el){ return el.selected; }).map(function(el){return $(el).val()})._wrapped;
+					return _.chain($("#specialties option")).filter(function(el){ return el.selected; }).map(function(el){return $(el).val()})._wrapped;
+				}());
+
+				map.settings.paymentMethods = (function(){
+					return _.chain($("#payment-methods option")).filter(function(el){ return el.selected && $(el).val !== ""; }).map(function(el){return $(el).val()})._wrapped;
 				}());
 
 				map.placesFromAddress($('input#address').val());
 			}());
 		});
 
-		$("select").chosen({disable_search_threshold: 10, width: '200px'});
+		$("#specialties").chosen({disable_search_threshold: 10, width: '200px'});
+		$("#payment-methods").chosen({disable_search_threshold: 10, width: '200px', allow_single_deselect: true});
 });

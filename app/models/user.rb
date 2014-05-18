@@ -25,6 +25,9 @@ class User < ActiveRecord::Base
   has_one :schedule
   has_many :free_blocks, :through => :schedule
 
+  has_many :accepted_payments
+  has_many :payment_methods, :through => :accepted_payments
+
   def specialty_names=(names)
     user_specialties.destroy_all
     names.each do |name|
