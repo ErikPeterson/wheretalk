@@ -17,12 +17,12 @@ $(function(){
 			return (function(){
 				map.settings.bounds='markers'
 				map.settings.distance=$("input[name='distance']").val();
-				map.settings.tags = (function(){
+				map.settings.specialties = (function(){
 					return _.chain($("#specialties option")).filter(function(el){ return el.selected; }).map(function(el){return $(el).val()})._wrapped;
 				}());
 
-				map.settings.paymentMethods = (function(){
-					return _.chain($("#payment-methods option")).filter(function(el){ return el.selected && $(el).val !== ""; }).map(function(el){return $(el).val()})._wrapped;
+				map.settings.paymentMethod = (function(){
+					return _.chain($("#payment-methods option")).filter(function(el){ return el.selected && $(el).val !== ""; }).map(function(el){return $(el).val()})._wrapped[0];
 				}());
 
 
@@ -38,6 +38,7 @@ $(function(){
 				alert("Please enter a valid address and distance.")
 				return;
 			}
+
 			$('#map').addClass("loading");
 	
 
@@ -46,12 +47,12 @@ $(function(){
 				map.settings.bounds='markers';
 				map.settings.distance=$("input[name='distance']").val();
 
-				map.settings.tags = (function(){
+				map.settings.specialties = (function(){
 					return _.chain($("#specialties option")).filter(function(el){ return el.selected; }).map(function(el){return $(el).val()})._wrapped;
 				}());
 
-				map.settings.paymentMethods = (function(){
-					return _.chain($("#payment-methods option")).filter(function(el){ return el.selected && $(el).val !== ""; }).map(function(el){return $(el).val()})._wrapped;
+				map.settings.paymentMethod = (function(){
+					return _.chain($("#payment-methods option")).filter(function(el){ return el.selected && $(el).val !== ""; }).map(function(el){return $(el).val()})._wrapped[0];
 				}());
 
 				map.placesFromAddress($('input#address').val());

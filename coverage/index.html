@@ -14,14 +14,14 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-05-18T19:00:03-04:00">2014-05-18T19:00:03-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-05-19T09:06:05-04:00">2014-05-19T09:06:05-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">91.37%</span></span>
+    (<span class="covered_percent"><span class="green">91.84%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
@@ -32,9 +32,9 @@
   <a name="AllFiles"></a>
   <div>
     <b>36</b> files in total.
-    <b>394</b> relevant lines. 
+    <b>392</b> relevant lines. 
     <span class="green"><b>360</b> lines covered</span> and
-    <span class="red"><b>34</b> lines missed </span>
+    <span class="red"><b>32</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,11 +62,11 @@
       
       <tr>
         <td class="strong"><a href="#67a9c3b7eaf49463bc8642be3d4f14799045a1b6" class="src_link" title="app/controllers/geo_coding_controller.rb">app/controllers/geo_coding_controller.rb</a></td>
-        <td class="red strong">7.41 %</td>
-        <td>47</td>
-        <td>27</td>
-        <td>2</td>
+        <td class="red strong">8.0 %</td>
+        <td>54</td>
         <td>25</td>
+        <td>2</td>
+        <td>23</td>
         <td>0.1</td>
       </tr>
       
@@ -561,11 +561,11 @@
         <div class="source_table" id="67a9c3b7eaf49463bc8642be3d4f14799045a1b6">
   <div class="header">
     <h3>app/controllers/geo_coding_controller.rb</h3>
-    <h4><span class="red">7.41 %</span> covered</h4>
+    <h4><span class="red">8.0 %</span> covered</h4>
     <div>
-      <b>27</b> relevant lines. 
+      <b>25</b> relevant lines. 
       <span class="green"><b>2</b> lines covered</span> and
-      <span class="red"><b>25</b> lines missed.</span>
+      <span class="red"><b>23</b> lines missed.</span>
     </div>
   </div>
   
@@ -611,244 +611,286 @@
         <li class="missed" data-hits="0" data-linenumber="7">
           
           
-          <code class="ruby">		distance = params[:distance]</code>
+          <code class="ruby">		distance = params[&quot;distance&quot;]</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="8">
           
           
-          <code class="ruby">		specialties = params[:tags]</code>
+          <code class="ruby">		return render :inline=&gt;&#39;{&quot;error&quot;:&quot;Location not geo-codable&quot;}&#39; if !results[0] || !results[0].data</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="9">
-          
-          
-          <code class="ruby">		payment_methods = params[:paymentMethods]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
-          
-          
-          <code class="ruby">		return render :inline=&gt;&#39;{&quot;error&quot;:&quot;Address not locatable&quot;}&#39; if !results[0] || !results[0].data</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="12">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="13">
-          
-          
-          <code class="ruby">		if specialties</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="14">
-          
-          
-          <code class="ruby">			specialty_ids = specialties.map(&amp;:to_i)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
-          
-          
-          <code class="ruby">		else</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="16">
-          
-          
-          <code class="ruby">			specialty_ids = []</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
-          
-          
-          <code class="ruby">		end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="18">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
-          
-          <code class="ruby">		if payment_methods</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
-          
-          <code class="ruby">			payment_method_ids = payment_methods.map(&amp;:to_i)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby">		else</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="22">
-          
-          
-          <code class="ruby">			payment_method_ids = []</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
-          
-          
-          <code class="ruby">		end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="25">
+        <li class="missed" data-hits="0" data-linenumber="10">
           
           
           <code class="ruby">		location_object = results[0].data</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">		@center = location_object[&quot;geometry&quot;][&quot;location&quot;]</code>
+          <code class="ruby">		</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="27">
+        <li class="missed" data-hits="0" data-linenumber="12">
           
           
-          <code class="ruby">		@formatted_address = location_object[&quot;formatted_address&quot;];</code>
+          <code class="ruby">		if params[:specialties]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="missed" data-hits="0" data-linenumber="13">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">			specialties = Specialty.find(params[:specialties])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="29">
-          
-          
-          <code class="ruby">		doctors = User.near(@formatted_address, distance)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="30">
-          
-          
-          <code class="ruby">		if doctors</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="31">
-          
-          
-          <code class="ruby">			if !specialty_ids.empty?</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="32">
-          
-          
-          <code class="ruby">				@doctors = doctors.reject do |el| </code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="33">
-          
-          
-          <code class="ruby">					(specialty_ids &amp; el.specialty_ids) != specialty_ids</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="34">
-          
-          
-          <code class="ruby">				end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="35">
-          
-          
-          <code class="ruby">			end</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="36">
-          
-          
-          <code class="ruby">			if !payment_method_ids.empty?</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="37">
-          
-          
-          <code class="ruby">				@doctors = @doctors.reject do |el|</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="38">
-          
-          
-          <code class="ruby">					(payment_method_ids &amp; el.payment_method_ids) != payment_method_ids</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="39">
-          
-          
-          <code class="ruby">				end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="40">
-          
-          
-          <code class="ruby">			end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="41">
-          
-          
-          <code class="ruby">		else</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="42">
-          
-          
-          <code class="ruby">			@doctors = []</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">		end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="45">
+        <li class="missed" data-hits="0" data-linenumber="16">
           
           
-          <code class="ruby">		render :template=&gt; &#39;json/nearby_doctors&#39;, :layout =&gt; false, :content_type =&gt; &#39;application/json&#39;</code>
+          <code class="ruby">		if !params[&quot;paymentMethod&quot;].empty?</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="17">
+          
+          
+          <code class="ruby">			payment_method = PaymentMethod.find(params[:paymentMethod])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="22">
+          
+          
+          <code class="ruby">		@center = location_object[&quot;geometry&quot;][&quot;location&quot;]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="23">
+          
+          
+          <code class="ruby">		@formatted_address = location_object[&quot;formatted_address&quot;];</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="24">
+          
+          
+          <code class="ruby">		@doctors = User.near(@formatted_address, distance)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="26">
+          
+          
+          <code class="ruby">		puts @doctors</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="28">
+          
+          
+          <code class="ruby">		if @doctors.empty?</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="29">
+          
+          
+          <code class="ruby">			return render :inline =&gt; &#39;{&quot;error&quot;:&quot;No doctors found within your search area&quot;}&#39; </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">		</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="34">
+          
+          
+          <code class="ruby">		if payment_method</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="35">
+          
+          
+          <code class="ruby">			@doctors = @doctors &amp; payment_method.users</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="39">
+          
+          
+          <code class="ruby">		return render :inline =&gt; &#39;{&quot;error&quot;:&quot;No doctors found within your search area that accept your preferred payment method.&quot;}&#39; if @doctors.empty?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">	</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="42">
+          
+          
+          <code class="ruby">		if specialties</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="43">
+          
+          
+          <code class="ruby">			@doctors = @doctors.reject do |doctor|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="44">
+          
+          
+          <code class="ruby">				(doctor.specialties &amp; specialties).empty?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">			end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="46">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby">		end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="48">
+          
+          
+          <code class="ruby">		return render :inline =&gt; &#39;{&quot;error&quot;:&quot;No doctors specializing in your choices found within your search area that accept your preferred payment method.&quot;}&#39; if @doctors.empty?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="52">
+          
+          
+          <code class="ruby">		render :template=&gt; &#39;json/nearby_doctors&#39;, :layout =&gt; false, :content_type =&gt; &#39;application/json&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
           
           
           <code class="ruby">end</code>
@@ -1718,8 +1760,8 @@
           <code class="ruby">    if result = results[0]</code>
         </li>
       
-        <li class="covered" data-hits="26" data-linenumber="45">
-          <span class="hits">26</span>
+        <li class="covered" data-hits="28" data-linenumber="45">
+          <span class="hits">28</span>
           
           <code class="ruby">      self.address = result.data[&quot;formatted_address&quot;]</code>
         </li>

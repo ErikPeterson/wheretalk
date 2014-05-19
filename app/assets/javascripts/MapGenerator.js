@@ -32,8 +32,8 @@
 				panControl: false,
 				scaleControl: false,
 				center: this.settings.center,
-				tags: [],
-				paymentMethods: [],
+				specialties: [],
+				paymentMethod: "",
                 zoomControlOptions: {
                     style: google.maps.ZoomControlStyle.MEDIUM,
                     position: google.maps.ControlPosition.RIGHT_CENTER
@@ -47,7 +47,7 @@
 
 	MapGenerator.prototype.placesFromAddress = function(address){
 
-		var addressData = {location: address, distance: this.settings.distance, tags: this.settings.tags, paymentMethods: this.settings.paymentMethods},
+		var addressData = {location: address, distance: this.settings.distance, specialties: this.settings.specialties, paymentMethod: this.settings.paymentMethod},
 			that = this;
 			
 		this.$el.addClass("loading");
